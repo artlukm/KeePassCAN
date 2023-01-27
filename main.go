@@ -11,8 +11,8 @@ import (
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
-	"github.com/amdf/ixxatvci3"
-	"github.com/amdf/ixxatvci3/candev"
+	"github.com/engaziwayo/ixxatvci3"
+	"github.com/engaziwayo/ixxatvci3/candev"
 )
 
 var canOk = make(chan int)
@@ -27,6 +27,7 @@ var labelText = widget.NewLabel("")
 var btnPass *widget.Button
 
 func main() {
+
 	a := app.New()
 	a.Settings().SetTheme(theme.DarkTheme())
 	w := a.NewWindow("Программа доступа к настройкам ИПТМ-395.0")
@@ -148,3 +149,15 @@ func processCAN() {
 		}
 	}
 }
+
+/*
+module github.com/RomanYankov/firmwareUpdateViaCan
+
+go 1.19
+
+require github.com/amdf/ixxatvci3 v0.2.0
+
+replace github.com/amdf/ixxatvci3 v0.2.0 => github.com/engaziwayo/ixxatvci3 v0.2.0
+
+require fyne.io/fyne/v2 v2.2.3
+*/
